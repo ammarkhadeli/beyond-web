@@ -1,0 +1,86 @@
+BEYOND — SUBMISSION COPY
+Prepared for Batata Warriors, 15 November 2026.
+Publication is pending verification. The links below are intended release paths, not confirmed public endpoints. This document has not been sent to NASA or submitted for judging.
+
+PROJECT TITLE
+BEYOND
+
+TEAM
+Batata Warriors
+
+CHALLENGE
+Space Mission Design Game
+
+SHORT SUMMARY
+BEYOND is a first-person browser game about designing and operating space missions. Players plan an ISS or Moon mission, balance payload and reserves, operate cockpit and worksite controls, and manage science and recovery. NASA resources connect mission decisions to engineering and orbital concepts.
+
+DETAILED DESCRIPTION
+BEYOND helps learners see how a mission design affects the flight that follows. The planner connects destination, payload, communications and reserves to mass, power, budget and launcher compatibility. Readiness checks explain configuration problems before launch.
+
+The ISS route includes rendezvous, docking and research work inside the station. The lunar route includes transfer, descent, surface experiments, sample collection and ascent. Both mission models include return and Earth recovery. Science completion alone does not satisfy the success condition: the crew and results must also return safely. Extra equipment and reserves change the design; maneuvering, science work and fault recovery consume resources.
+
+Players can use a first-person cockpit, an exterior camera or a trajectory view. Cadet, Commander and Expert settings adjust assistance and margins. Authored crew guidance and optional physics explanations support learning. Visible time acceleration advances the numerical simulation during long journeys.
+
+Our contribution is the connection between planning, physical controls, scientific work and resource consequences in one browser experience. The mission model determines outcomes; guidance text does not control the calculations.
+
+NASA RESOURCES AND THEIR USE
+1. Design and Develop Science Missions
+https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf
+The objective–requirements–operations–verification framework informs mission selection, readiness checks, ordered science tasks and recovery criteria. Game objectives and thresholds are authored.
+
+2. Goddard Mission Design Lab
+https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab/
+Feasibility assessment and trade studies inform the planner's linked mass, power, budget and reserve choices. We do not reproduce NASA's design tools.
+
+3. NASA/JPL astrodynamic parameters
+https://ssd.jpl.nasa.gov/astro_par.html
+Earth and Moon gravitational parameters support numerical orbital motion. The simulation uses simplified point-mass dynamics and circular ephemerides.
+
+4. NASA Scientific Visualization Studio: CGI Moon Kit
+https://svs.gsfc.nasa.gov/4720/
+LROC imagery and LOLA elevation provide the lunar globe. Local Apollo 11 terrain uses LROC data: https://data.lroc.im-ldi.com/lroc/view_rdr/NAC_DTM_APOLLO11. Close equipment and surface detail are reconstructed; imagery is not live.
+
+5. ISS facts and figures; NASA 3D Resources
+https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
+https://science.nasa.gov/3d-resources/
+ISS facts support orbital explanations. Credited station, vehicle and astronaut assets provide visual context. The game uses a fixed circular ISS target, not live station telemetry. Source geometry does not validate our physics.
+
+Additional source-to-mechanic records and individual NASA, Smithsonian, USGS, Poly Haven and contributor credits accompany the release.
+
+TOOLS AND TECHNOLOGIES
+TypeScript, React, Vite and Babylon.js; WebGPU support with WebGL fallback; browser storage, Web Audio and optional browser speech synthesis. Node test tools and Playwright support validation. Existing GLB assets include original Blender-scripted models and credited source models. Optional launch-site weather uses Open-Meteo with a labeled preset fallback.
+
+AI DEVELOPMENT DISCLOSURE
+The concept and requested design originated with the user and Batata Warriors. AI coding assistance helped implement and revise software, original modeling scripts, procedural geometry, authored guidance, tests and documentation. No Azure AI or LLM service runs during gameplay. Optional browser speech reads authored captions; historical human recordings retain separate attribution. Presentation images are actual gameplay captures of the simulation, not generated promotional images. Development assistance and asset adaptations are recorded in the source documentation and credits metadata.
+
+TESTED RESULTS AND LIMITATIONS
+The source/model suite passed 92 tests. Both complete browser journeys passed from launchpad through physical science, fault recovery, Earth recovery, exported reports and fresh restart: ISS recovered 48 MB and Moon recovered 32 MB, each with 100% science. Two failure/restart cases passed. Across final core and targeted runs, 21 distinct interface cases passed; three native-WebGPU-dependent cases were skipped. Production build and TypeScript checks passed.
+
+The journeys used scripted UI actions, low graphics, clock acceleration and full Chromium with SwiftShader WebGL 2. Telemetry and target geometry were read without injecting mission state. Actual presentation captures show the launchpad, ISS practice approach and lunar practice descent. These results establish assisted browser routes, not unaided human usability, audible-output quality or hardware performance. The user separately reported correct cockpit rendering and audible sound.
+
+Physics, orbital planes, atmosphere, thermal behavior, procedures and environments are simplified. Resource scores, event schedules and damage thresholds include authored balancing values. The modern craft is a fictional trainer; reconstructed cabins are not certified replicas. No photorealism, operational mission accuracy, live orbital telemetry, multiplayer or Mars mission is claimed. Original code and documentation use MIT licensing; third-party assets retain their own rights. NASA endorsement is not implied.
+
+INTENDED RELEASE LINKS — PUBLICATION PENDING VERIFICATION
+Interactive demo:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/
+
+Seven-slide presentation, HTML:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.html
+
+Seven-slide presentation, PDF:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.pdf
+
+Source code and documentation archive:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/source.zip
+This is a downloadable source archive, not a public repository.
+
+Source and mechanic record:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/docs/SOURCES.md
+
+Asset credits:
+https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/assets/credits.json
+
+Team page:
+https://www.spaceappschallenge.org/2026/find-a-team/batata-warriors/
+
+No submission confirmation has been recorded. Verify anonymous access to the demo, presentation and source archive before using the release links in the form.

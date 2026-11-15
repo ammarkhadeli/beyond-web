@@ -1,0 +1,11 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+page.on('pageerror',e=>console.log('PAGE ERROR:',e.message));
+page.on('console',msg=>{if(msg.type()==='error')console.log('CONSOLE ERROR:',msg.text());});
+await page.goto('http://127.0.0.1:5173');await page.waitForTimeout(7000);
+await page.screenshot({path:'.local/home.png'});
+await page.getByRole('button',{name:/MISSION 01.*Station rendezvous/}).click();await page.screenshot({path:'.local/planner.png'});
+await page.getByRole('button',{name:/Enter the cockpit/}).click();await page.waitForTimeout(2000);await page.screenshot({path:'.local/launch.png'});
+await page.getByRole('button',{name:/Ignite & launch/}).click();await page.waitForTimeout(16500);await page.getByRole('button',{name:/Complete transfer/}).click();await page.waitForTimeout(1000);await page.screenshot({path:'.local/approach.png'});
+console.log('Screenshots taken');await browser.close();

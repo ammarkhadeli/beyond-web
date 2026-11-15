@@ -1,0 +1,31 @@
+import {chromium} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const requested=process.argv[2]||'webgpu';
+const baseURL=new URL(process.argv[3]||'http://127.0.0.1:5173').origin;
+const output=process.argv[4]||requested;
+const browser=await chromium.launch({executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',args:['--use-angle=d3d11']});
+const errors=[],network=[],timings={};
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ page.on('pageerror',e=>{errors.push(e.message);console.log('ERROR',e.message.slice(0,400));});
+ page.on('console',m=>{if(m.type()==='error'||/WebGPU uncaptured error|Error compiling|validation error/i.test(m.text())){errors.push(m.text());if(errors.length<9)console.log(m.type(),m.text().slice(0,700));}});
+ page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==baseURL)network.push(r.url());});
+ await page.addInitScript(()=>localStorage.setItem('beyond-v2-settings',JSON.stringify({quality:'high',voice:false,sound:false,sensitivity:1,beginnerPauses:false})));
+ await page.goto(baseURL+'/?renderer='+requested);
+ await page.getByRole('button',{name:'Start flight',exact:true}).or(page.getByRole('alert')).first().waitFor({timeout:120000});
+ if(await page.getByRole('alert').count())throw new Error(await page.getByRole('alert').innerText());
+ await page.waitForTimeout(8000);
+ const measure=async name=>{timings[name]=await page.evaluate(()=>new Promise(resolve=>{const intervals=[];let previous=performance.now(),start=previous;function frame(now){intervals.push(now-previous);previous=now;if(now-start<3000)requestAnimationFrame(frame);else{intervals.shift();intervals.sort((a,b)=>a-b);resolve({frames:intervals.length,meanFps:1000/(intervals.reduce((a,b)=>a+b,0)/intervals.length),medianFrameMs:intervals[Math.floor(intervals.length*.5)],p95FrameMs:intervals[Math.floor(intervals.length*.95)]});}}requestAnimationFrame(frame);}));};
+ await measure('setup');
+ const info=await page.evaluate(()=>{const s=window.spaceScene,e=s.engine;return {graphics:s.graphicsInfo,isWebGPU:e.isWebGPU,description:e.description,fps:e.getFps(),caps:{maxTextureSize:e.getCaps().maxTextureSize,drawBuffersExtension:e.getCaps().drawBuffersExtension},adapter:e._adapterInfo?{vendor:e._adapterInfo.vendor,architecture:e._adapterInfo.architecture,description:e._adapterInfo.description}:null};});
+ console.log('INFO',JSON.stringify(info));
+ await page.screenshot({path:'.local/'+output+'-setup.png'});
+ await page.getByRole('button',{name:'Moon',exact:true}).click();await page.getByLabel('Start location').selectOption('pad');await page.getByLabel('Difficulty').selectOption('commander');await page.getByRole('button',{name:'Start flight',exact:true}).click();
+ await page.waitForTimeout(3000);await measure('cockpit');await page.screenshot({path:'.local/'+output+'-cockpit.png'});
+ await page.keyboard.press('c');await page.waitForTimeout(2500);await measure('external');await page.screenshot({path:'.local/'+output+'-external.png'});
+ await page.keyboard.press('m');await page.waitForTimeout(2500);await page.screenshot({path:'.local/'+output+'-trajectory.png'});
+ const result={browser:browser.version(),...info,timings,errors:errors.slice(0,20),errorCount:errors.length,externalRequests:[...new Set(network)]};
+ await writeFile('.local/'+output+'-audit.json',JSON.stringify(result,null,2));
+ console.log('RESULT',JSON.stringify({backend:info.graphics,timings,errorCount:errors.length,externalRequests:[...new Set(network)]}));
+ if(errors.length||network.length||(requested==='webgpu'&&!info.isWebGPU))process.exitCode=1;
+}catch(e){console.log('FAILED',e.message);process.exitCode=1;}finally{await browser.close();}
