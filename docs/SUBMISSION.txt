@@ -60,7 +60,7 @@ The journeys used scripted UI actions, low graphics, clock acceleration and full
 
 Physics, orbital planes, atmosphere, thermal behavior, procedures and environments are simplified. Resource scores, event schedules and damage thresholds include authored balancing values. The modern craft is a fictional trainer; reconstructed cabins are not certified replicas. No photorealism, operational mission accuracy, live orbital telemetry, multiplayer or Mars mission is claimed. Original code and documentation use MIT licensing; third-party assets retain their own rights. NASA endorsement is not implied.
 
-INTENDED RELEASE LINKS — PUBLICATION PENDING VERIFICATION
+PUBLIC RELEASE LINKS
 Interactive demo:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/
 
