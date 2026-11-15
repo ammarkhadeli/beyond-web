@@ -1,0 +1,8 @@
+{
+  "width": 1440,
+  "height": 720,
+  "encoding": "uint16 little endian",
+  "elevationMeters": "(value - 20000) * 0.5",
+  "referenceRadiusMeters": 1737400.0,
+  "source": "https://svs.gsfc.nasa.gov/4720/"
+}

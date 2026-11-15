@@ -1,0 +1,15 @@
+{
+  "recordings": [
+    {
+      "file": "apollo11-touchdown.mp3",
+      "original": "https://www.nasa.gov/wp-content/uploads/2015/01/569462main_eagle_has_landed.mp3",
+      "source": "https://www.nasa.gov/historical-sounds/",
+      "speaker": "Neil Armstrong",
+      "event": "Apollo 11 lunar landing, July 20, 1969",
+      "rights": "NASA Media Usage Guidelines",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "processing": "Original MP3 retained without voice synthesis, musical accompaniment or editing."
+    }
+  ],
+  "notes": "Historical human speech. Do not substitute this caption for authored tutorial guidance; play only at successful Apollo lunar touchdown."
+}

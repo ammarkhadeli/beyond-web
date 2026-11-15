@@ -1,0 +1,18 @@
+{
+  "width": 1025,
+  "height": 1025,
+  "spacingMeters": 2,
+  "latitudeDegrees": 0.674,
+  "longitudeDegrees": 23.47,
+  "datumElevationMeters": -1924.406494140625,
+  "moonReferenceRadiusMeters": 1737400.0,
+  "imagePixelAtAnchor": [
+    511.9375933590345,
+    511.530907061624
+  ],
+  "axes": "Image rows run north to south; columns run west to east. Float32 little endian heights are relative to datumElevationMeters.",
+  "missingSamples": 0,
+  "source": "https://data.lroc.im-ldi.com/lroc/view_rdr/NAC_DTM_APOLLO11",
+  "credit": "NASA/GSFC/Arizona State University, LROC team",
+  "sourceAcquisition": "2011-01-22; derived product version1.9 (2020-10-10)"
+}

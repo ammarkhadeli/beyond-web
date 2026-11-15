@@ -1,0 +1,12 @@
+{
+  "source": "https://svs.gsfc.nasa.gov/4720/",
+  "sourceFile": "assets-source/v3/lroc_color_poles_8k.tif",
+  "output": "moon-lroc-8k.jpg",
+  "dimensions": [
+    8192,
+    4096
+  ],
+  "credit": "NASA Scientific Visualization Studio; Ernie Wright (STC), Noah Petro (NASA/GSFC), LRO LROC",
+  "conversion": "Pillow 13 TIFF decoder; RGB JPEG quality 94; 4:4:4 chroma; original 8192x4096 resolution, no retouching, sharpening, displacement or synthesis.",
+  "notes": "Natural-color aesthetic adaptation of LROC photographic mosaic, centred 0 degrees longitude. Not scientific reflectance data."
+}

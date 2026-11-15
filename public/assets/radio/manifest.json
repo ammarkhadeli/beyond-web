@@ -1,0 +1,12 @@
+{
+  "touchdown": {
+    "src": "/assets/radio/apollo11-touchdown.mp3",
+    "caption": "Houston, Tranquility Base here. The Eagle has landed.",
+    "credit": "NASA \u2014 Neil Armstrong, Apollo 11, July 20, 1969. Archival recording.",
+    "source": "https://www.nasa.gov/historical-sounds/",
+    "transcriptSource": "https://www.nasa.gov/wp-content/uploads/2015/03/Apollo-11_Day-05-Highlights.pdf",
+    "duration": 5.33094,
+    "mission": "moon",
+    "vehicle": "apollo-lm"
+  }
+}

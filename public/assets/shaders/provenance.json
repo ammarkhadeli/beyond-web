@@ -1,0 +1,13 @@
+{
+  "package": "@babylonjs/core",
+  "version": "8.56.2",
+  "source": "https://github.com/BabylonJS/Babylon.js/tree/8.56.2/packages/dev/core/assets",
+  "purpose": "Local GLSL to SPIR-V and WGSL translation for WebGPU custom materials. No runtime CDN requests.",
+  "files": {
+    "twgsl.wasm": "a434c2decdbb38caadf5f486d806384a1543554828c983c77922b2d92579914c",
+    "glslang.js": "c3a3c2a47284b16b60293fa08a5842fbe8689ac617edc857ab6cb8134a590db4",
+    "twgsl.js": "b4f1f66263b801210f955f74aa71f1939be647ce0fd80ea5befd12a78499d5ff",
+    "glslang.wasm": "d79453e0803ebcdf3753c6b1d8d51543b52fed96f7f0d4aec94acd847e225169"
+  },
+  "licenses": "BABYLON-LICENSE.txt and NOTICE.txt"
+}

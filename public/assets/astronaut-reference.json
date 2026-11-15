@@ -1,0 +1,93 @@
+{
+  "source": "https://science.nasa.gov/3d-resources/astronaut/",
+  "credit": "DigitalSpace Corporation; NASA 3D Resources",
+  "sourceAsset": "assets-source/v3/astronaut-original.glb",
+  "sourceRevision": "d8d4d8341229e09c77a68a48438bc90f9d9f0720",
+  "sourceTriangles": 6381,
+  "rig": null,
+  "animations": [],
+  "adaptation": "Scaled by 0.0254 to a 1.886 m suited stature. Original UV photographic textures retained. Welded duplicate vertices for smooth normals. Head, upper torso and rear backpack excluded in first-person variants to prevent camera clipping; arms and legs statically posed by vertex transforms.",
+  "limitations": "Reference suit model, not a photogrammetric body scan or historical Apollo A7L reproduction. No skeleton, finger articulation, reaching animation, or hand-to-control constraints.",
+  "coordinates": "Blender Z-up, front -Y; glTF Y-up, front +Z. First-person origin at approximate pelvis (source raw centre); eye in Blender (0,-0.34,0.68), glTF (0,0.68,0.34).",
+  "materials": [
+    {
+      "name": "astnt1_1",
+      "nodes": [
+        [
+          "BSDF_PRINCIPLED",
+          null,
+          []
+        ],
+        [
+          "OUTPUT_MATERIAL",
+          null,
+          []
+        ],
+        [
+          "MIX",
+          null,
+          []
+        ],
+        [
+          "TEX_IMAGE",
+          "astnt1_1",
+          [
+            1024,
+            1024
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "astnt1_2",
+      "nodes": [
+        [
+          "BSDF_PRINCIPLED",
+          null,
+          []
+        ],
+        [
+          "OUTPUT_MATERIAL",
+          null,
+          []
+        ],
+        [
+          "MIX",
+          null,
+          []
+        ],
+        [
+          "TEX_IMAGE",
+          "astnt1_2",
+          [
+            128,
+            128
+          ]
+        ]
+      ]
+    }
+  ],
+  "runtimeContract": {
+    "standing": {
+      "file": "astronaut-standing.glb",
+      "heightScale": 0.9277558138215682,
+      "sourcePelvisHeight": 0.8750012128578255,
+      "eyeHeight": 1.65,
+      "eyeForward": 0.315,
+      "forward": "glTF +Z (Blender -Y)",
+      "origin": "lowest boot; Y=0 in glTF",
+      "headRemoved": true
+    },
+    "seated": {
+      "file": "astronaut-seated.glb",
+      "heightScale": 0.9277558138215682,
+      "sourcePelvisHeight": 0.6023001456208223,
+      "eyeHeight": 1.3,
+      "eyeForward": 0.315,
+      "forward": "glTF +Z (Blender -Y)",
+      "origin": "lowest boot; Y=0 in glTF",
+      "headRemoved": true
+    }
+  },
+  "textureRecovery": "Used original uncompressed NASA revision. Its 174 out-of-range UVs caused Draco quantization to collapse the remaining suit UV detail; original retains 2131 unique UVs and correct fabric mapping."
+}

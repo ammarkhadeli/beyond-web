@@ -1,0 +1,47 @@
+{
+  "source": "NASA/Michael D. Carbajal Saturn V model, SATURNVT texture",
+  "processing": "Source navy decal-key background changed to white outside exact flag rectangles; all six flags unchanged.",
+  "sourceBackgroundLinearRGB": [
+    0.0,
+    0.0,
+    0.4392157196998596
+  ],
+  "preservedRectanglesBottomOrigin": [
+    [
+      323,
+      470,
+      349,
+      484
+    ],
+    [
+      373,
+      470,
+      399,
+      484
+    ],
+    [
+      423,
+      470,
+      449,
+      484
+    ],
+    [
+      473,
+      470,
+      499,
+      484
+    ],
+    [
+      523,
+      470,
+      549,
+      484
+    ],
+    [
+      572,
+      470,
+      598,
+      484
+    ]
+  ]
+}
