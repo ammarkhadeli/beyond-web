@@ -31,7 +31,9 @@ for name in ['beyond-web-build.zip', 'beyond-source.tar.gz']:
 with zipfile.ZipFile(out / 'beyond-web-build.zip') as archive:
     assert archive.testzip() is None
     assert 'index.html' in archive.namelist()
-    assert archive.read('presentation.html') == (root / 'docs/presentation.html').read_bytes()
+    assert archive.read('presentation.html') == (root / 'public/presentation.html').read_bytes(), 'Rebuild after updating the public presentation.'
+    assert archive.read('presentation.pdf') == (root / 'public/presentation.pdf').read_bytes(), 'Rebuild after updating the PDF.'
+    assert archive.read('source.zip') == (root / 'public/source.zip').read_bytes(), 'Rebuild after updating the source archive.'
 with tarfile.open(out / 'beyond-source.tar.gz') as archive:
     names = archive.getnames()
     assert 'beyond/package.json' in names
