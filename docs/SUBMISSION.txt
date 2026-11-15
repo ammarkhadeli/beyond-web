@@ -1,6 +1,6 @@
 BEYOND — SUBMISSION COPY
 Prepared for Batata Warriors, 15 November 2026.
-Publication is pending verification. The links below are intended release paths, not confirmed public endpoints. This document has not been sent to NASA or submitted for judging.
+The game, presentation and source archive are public. Anonymous browser access and matching downloads were verified on 15 November 2026. This document has not been sent to NASA or submitted for judging.
 
 PROJECT TITLE
 BEYOND
@@ -83,4 +83,4 @@ https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/assets/credits.json
 Team page:
 https://www.spaceappschallenge.org/2026/find-a-team/batata-warriors/
 
-No submission confirmation has been recorded. Verify anonymous access to the demo, presentation and source archive before using the release links in the form.
+Public access to the game, presentation and source archive has been verified. No judging-submission confirmation has been recorded. Complete the team declarations, click Submit for Judging, and verify the confirmation banner.

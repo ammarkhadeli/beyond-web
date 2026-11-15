@@ -2,6 +2,8 @@
 
 A browser space-mission game for the NASA Space Apps 2026 **Space Mission Design Game** challenge. Plan a mission, fly to the ISS or Moon, perform science work, manage a fault, and return to Earth. Original project code is MIT licensed; downloaded assets retain their separate credits and rights.
 
+[Play the game](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/) · [Seven-slide PDF](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.pdf) · [Source archive](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/source.zip)
+
 This checkout is the web implementation. It uses **TypeScript, React, Vite, and Babylon.js**, with WebGPU when available and WebGL fallback. NASA, Smithsonian and USGS resources support the simulation and visual context. Guidance is authored; no Azure AI or LLM service runs during gameplay.
 
 ## Run
@@ -44,7 +46,7 @@ Release packaging creates `/source.zip` for the published game. It contains the 
 Extract the ZIP, enter its `beyond` directory, and use Node.js 22 or newer. Replace the example URL with the published game's HTTPS base URL:
 
 ```sh
-node scripts/fetch-assets.mjs https://published-game.example/
+node scripts/fetch-assets.mjs https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/
 npm ci
 npm run dev
 ```

@@ -50,4 +50,6 @@ Maintainer evidence is retained in `.local/final-tests-hatch.log`, `.local/journ
 
 ## Remaining acceptance
 
-Play both missions without scripted assistance on the target desktop hardware. Review physical controls, worksite visibility, voice/effects, both cabins, both launch sites and reduced graphics. Measure frame pacing before making performance claims. Native WebGPU fault recovery, touch/mobile usability and scientific visual fidelity remain outside the verified scope. Verify anonymous access to the final game, presentation and source archive after publication. Competition submission requires its own confirmation.
+Public release access was checked at `2026-11-15T19:48:13Z` in a fresh isolated Chromium context, with no supplied login or authorization headers. The game launched an ISS approach with no captured application errors or failed resources. Live launch-site weather loaded in the public interface. The source ZIP and seven-slide PDF returned HTTP 200 and matched the local release SHA-256 hashes. The published URL is https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/.
+
+Play both missions without scripted assistance on the target desktop hardware. Review physical controls, worksite visibility, voice/effects, both cabins, both launch sites and reduced graphics. Measure frame pacing before making performance claims. Native WebGPU fault recovery, touch/mobile usability and scientific visual fidelity remain outside the verified scope. Competition submission requires its own confirmation.

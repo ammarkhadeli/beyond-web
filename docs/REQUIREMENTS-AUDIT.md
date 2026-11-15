@@ -29,7 +29,7 @@ This audit distinguishes implemented behavior, observed results and remaining ac
 | No Azure AI/LLM gameplay | Deterministic game logic and authored guidance; browser route checks found no model requests | Browser speech providers may independently use network voices |
 | AI disclosure and reusable source | Original MIT license, per-asset rights, AI-development record, source-archive packaging and hash-checked asset restoration | Third-party assets retain their own licenses |
 | Seven-slide presentation, no video | Exactly seven HTML sections with actual practice captures, source links and scoped validation; printable PDF release path | Captures do not establish performance or human usability |
-| Public demo and final submission | Release paths for game, presentation and reusable source; submission copy prepared | Verify anonymous public access after deployment and obtain the separate judging-submission confirmation |
+| Public demo and final submission | Game, seven-slide presentation and source archive published; anonymous browser access and matching downloads verified; submission copy prepared | The separate NASA judging-submission confirmation is still required |
 | Mars, multiplayer and unrestricted construction | Longer-term scope | Deferred; not represented as implemented |
 
 ## Verified results
