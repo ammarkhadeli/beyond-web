@@ -2,7 +2,7 @@
 
 A browser space-mission game for the NASA Space Apps 2026 **Space Mission Design Game** challenge. Plan a mission, fly to the ISS or Moon, perform science work, manage a fault, and return to Earth. Original project code is MIT licensed; downloaded assets retain their separate credits and rights.
 
-[Play the game](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/) · [Seven-slide PDF](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.pdf) · [Source archive](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/source.zip)
+[Play the game](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/) · [Seven-slide PDF](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.pdf) · [GitHub repository](https://github.com/ammarkhadeli/beyond-web) · [Source archive](https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/source.zip)
 
 This checkout is the web implementation. It uses **TypeScript, React, Vite, and Babylon.js**, with WebGPU when available and WebGL fallback. NASA, Smithsonian and USGS resources support the simulation and visual context. Guidance is authored; no Azure AI or LLM service runs during gameplay.
 
@@ -11,6 +11,8 @@ This checkout is the web implementation. It uses **TypeScript, React, Vite, and 
 With Node.js 22 or newer and npm installed:
 
 ```sh
+git clone https://github.com/ammarkhadeli/beyond-web.git
+cd beyond-web
 npm ci
 npm run dev
 ```
@@ -110,6 +112,6 @@ The journeys used scripted UI inputs, low graphics, Playwright clock advancement
 - [Assets and development AI disclosure](docs/ASSETS-AND-AI.md)
 - [Machine-readable asset credits](public/assets/credits.json)
 - [Requirements and verification audit](docs/REQUIREMENTS-AUDIT.md)
-- [Seven-slide presentation](docs/presentation.html), served at `/presentation.html`; printable PDF at `/presentation.pdf`
+- [Seven-slide presentation](docs/presentation.html), served at `/presentation.html`; printable PDF at `/presentation.pdf`. [Editing and guide alignment](docs/PRESENTATION.md).
 
 Original code and documentation are MIT licensed. Asset-specific rights and AI-development assistance are disclosed separately. The project does not claim NASA endorsement, certified mission accuracy, photorealism, live orbital telemetry or measured hardware performance. Competition submission is a separate action; no judging confirmation is represented here.

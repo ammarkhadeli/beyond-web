@@ -61,18 +61,21 @@ The journeys used scripted UI actions, low graphics, clock acceleration and full
 Physics, orbital planes, atmosphere, thermal behavior, procedures and environments are simplified. Resource scores, event schedules and damage thresholds include authored balancing values. The modern craft is a fictional trainer; reconstructed cabins are not certified replicas. No photorealism, operational mission accuracy, live orbital telemetry, multiplayer or Mars mission is claimed. Original code and documentation use MIT licensing; third-party assets retain their own rights. NASA endorsement is not implied.
 
 PUBLIC RELEASE LINKS
-Interactive demo:
+Final project — playable game:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/
 
 Seven-slide presentation, HTML:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.html
 
-Seven-slide presentation, PDF:
+Project demo — seven-slide presentation, PDF:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/presentation.pdf
+
+Public source repository:
+https://github.com/ammarkhadeli/beyond-web
 
 Source code and documentation archive:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/source.zip
-This is a downloadable source archive, not a public repository.
+The archive is an alternative download; the GitHub repository contains the complete game source and runtime assets.
 
 Source and mechanic record:
 https://beyond-batata-warriors.khadeliabdullah.chatgpt.site/docs/SOURCES.md
