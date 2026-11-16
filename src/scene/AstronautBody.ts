@@ -8,6 +8,7 @@ import { Bone } from '@babylonjs/core/Bones/bone';
 import { Skeleton } from '@babylonjs/core/Bones/skeleton';
 import type { Scene } from '@babylonjs/core/scene';
 import type { AstronautRig } from './AstronautRig';
+import { removeMissionInsignia } from './UnmarkedSurfaces';
 
 /** NASA textured suit with lightweight procedural skinning. The original static
  * meshes receive blended hip/shoulder weights; this is authored motion, not mocap. */
@@ -21,6 +22,7 @@ export class AstronautBody {
   this.ready=Promise.all([['astronaut-standing.glb',this.standing],['astronaut-seated.glb',this.seated],['astronaut-full.glb',this.full]].map(async([file,parent])=>{
    if(file==='astronaut-full.glb'){const response=await fetch('/assets/'+file,{method:'HEAD'});if(!response.ok||response.headers.get('content-type')?.includes('text/html'))return;}
    const imported=await SceneLoader.ImportMeshAsync('','/assets/',file as string,scene),root=imported.meshes[0];root.parent=parent as TransformNode;root.rotationQuaternion=Quaternion.RotationAxis(Vector3.Up(),Math.PI);
+   removeMissionInsignia(imported.meshes,'suit');
    const seated=parent===this.seated;
    // Bones retain the imported model's metre-scale bind pose.
    const skeleton=new Skeleton('suited joints '+file,'suited joints '+file,scene);

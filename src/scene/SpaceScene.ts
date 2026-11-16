@@ -1,5 +1,6 @@
 import { Ray } from '@babylonjs/core/Culling/ray';
 import { AstronautBody } from './AstronautBody';
+import { removeMissionInsignia } from './UnmarkedSurfaces';
 import { ModernCockpit } from './ModernCockpit';
 import { stationApproachCamera } from './approachCamera';
 import { solarVisibility, lunarShadowRadius } from './SolarVisibility';
@@ -218,7 +219,7 @@ export class SpaceScene {
     apollo.meshes[0].parent=this.apollo;lunarCabin.meshes[0].parent=this.lunarCabin;crew.meshes[0].parent=this.cockpit;launcher.meshes[0].parent=this.rocket;lander.meshes[0].parent=this.lander;
     const interiorPlacement=new TransformNode('Destiny navigation alignment',this.scene);interiorPlacement.parent=this.stationInterior;interiorPlacement.position.set(.3635,.1905,3.993);interiorPlacement.rotation.y=-Math.PI/2;interior.meshes[0].parent=interiorPlacement;
     spacecraft.meshes[0].parent=this.spacecraft;saturn.meshes[0].parent=this.saturn;this.saturnMeshes=saturn.meshes.filter(m=>m instanceof Mesh) as Mesh[];
-    for(const mesh of this.saturnMeshes){const material=mesh.material;if(material instanceof PBRMaterial&&material.name.startsWith('blinn8SG'))material.albedoTexture=new Texture('/assets/earth/saturn-flag-decal.png',this.scene,false,false);}
+    for(const [asset,imported] of [['saturn',saturn],['lander',lander],['station',station],['interior',interior]] as const)removeMissionInsignia(imported.meshes,asset);
     for(const mesh of this.station.getChildMeshes())mesh.dispose();station.meshes[0].parent=this.station;
     for(const imported of [crew,launcher,lander,spacecraft,station,saturn,interior,lunarCabin,apollo]){imported.meshes[0].rotationQuaternion=Quaternion.Identity();for(const mesh of imported.meshes){if(mesh.material)mesh.material.useLogarithmicDepth=true;}}
     refineTrainerMaterials(this.scene,[...launcher.meshes,...spacecraft.meshes]);
